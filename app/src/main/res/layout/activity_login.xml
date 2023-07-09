@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".login.LoginActivity">
+
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="149dp"
+            android:layout_height="142dp"
+            android:layout_marginTop="160dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/logo" />
+
+        <TextView
+            android:id="@+id/goyoung"
+            style="@style/text_black"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="93dp"
+            android:text="고   용"
+            android:textSize="32dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/logo" />
+
+        <LinearLayout
+            android:id="@+id/etBox"
+            android:layout_width="328dp"
+            android:layout_height="130dp"
+            android:orientation="vertical"
+            app:layout_constraintTop_toBottomOf="@id/logo"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="52dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp">
+
+            <EditText
+                android:id="@+id/email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/login_et"
+                style="@style/login_edit_text"
+                android:hint="전화번호"
+                android:singleLine="true"
+                android:paddingStart="32dp"
+                android:paddingEnd="10dp"
+                android:textColorHighlight="@color/light_pink"
+                android:textSelectHandle="@color/light_pink"
+                android:textSelectHandleLeft="@color/light_pink"
+                android:textSelectHandleRight="@color/light_pink"/>
+
+            <EditText
+                android:id="@+id/password"
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/login_et"
+                style="@style/login_edit_text"
+                android:hint="비밀번호"
+                android:singleLine="true"
+                android:paddingStart="32dp"
+                android:paddingEnd="10dp"
+                android:textColorHighlight="@color/light_pink"
+                android:textSelectHandle="@color/light_pink"
+                android:textSelectHandleLeft="@color/light_pink"
+                android:textSelectHandleRight="@color/light_pink"/>
+        </LinearLayout>
+
+        <android.widget.Button
+            android:id="@+id/btn"
+            android:layout_width="328dp"
+            android:layout_height="71dp"
+            android:background="@drawable/login_btn"
+            app:layout_constraintTop_toBottomOf="@+id/etBox"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="48dp"
+            android:text="로그인"
+            style="@style/login_btn"
+            android:elevation="30dp"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
